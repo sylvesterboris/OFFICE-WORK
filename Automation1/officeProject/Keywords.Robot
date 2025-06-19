@@ -1,0 +1,101 @@
+*** Settings ***
+Library           SeleniumLibrary
+Variables         locator.py
+
+
+*** Variables ***
+${BROWSER}           chrome
+${URL}               https://www.saucedemo.com
+${CHROMEDRIVER}      C:/Users/ASUS/OneDrive/Desktop/web driver py/chromedriver-win64/chromedriver.exe
+${USERNAME}          standard_user
+${PASSWORD}          secret_sauce
+
+*** Keywords ***
+Input Username
+    Input Text      ${username_input}       ${USERNAME}
+
+Input Password
+    Input Text      ${password_input}       ${PASSWORD}
+
+Login Test
+    Open Browser    ${URL}    ${BROWSER}    executable_path=${CHROMEDRIVER}
+    Maximize Browser Window
+    Input Username
+    Input Password
+    Click Button    ${login_button}
+
+Verify Landing Page Is Displayed
+    Page Should Contain Element    ${backpack_add_btn}
+
+Add A Product To The Cart
+    Click Button    ${backpack_add_btn}
+    Element Should Not Be Visible    ${backpack_add_btn}
+
+Go To The Cart
+    Click Element    ${cart_icon}
+
+Verify Product Is Added To The Cart
+    Element Should Be Visible    ${cart_item}
+
+Remove The Product From The Cart
+    Click Element    ${remove_button}
+
+Go Back To Homepage
+    Click Element    ${menu_button}
+    Sleep    1s
+    Click Element    ${inventory_sidebar_link}
+
+Add Two Or More Products To The Cart
+    Click Element    ${fleece_jacket_add_btn}
+    Click Element    ${bike_light_add_btn}
+    Click Element    ${bolt_tshirt_add_btn}
+    Click Element    ${cart_icon}
+
+Checkout From Cart Page
+    Click Element    ${checkout_button}
+
+Add your Information
+    Input Text    ${first_name_input}    John
+    Input Text    ${last_name_input}     billy
+    Input Text    ${postal_code_input}   110059
+    Click Element    ${continue_button}
+
+Verify Checkout Overview
+    ${expected_items}=    Create List    Sauce Labs Fleece Jacket    Sauce Labs Bike Light    Sauce Labs Bolt T-Shirt
+    @{cart_items}=    Get WebElements    ${item_names}
+
+    FOR    ${item}    IN    @{cart_items}
+        ${item_name}=    Get Text    ${item}
+        Should Contain    ${expected_items}    ${item_name}
+    END
+
+    ${actual_count}=    Get Length    ${cart_items}
+    ${expected_count}=    Get Length    ${expected_items}
+    Should Be Equal As Integers    ${actual_count}    ${expected_count}
+
+Verify Shipping Information
+    Page Should Contain Element    ${summary_total_label}
+    ${shipping_info}=    Get Text    ${shipping_info_label}
+    Log    Shipping Info: ${shipping_info}
+
+Verify Total Amount Of Cart
+    @{item_prices}=    Get WebElements    ${item_prices}
+    ${sum}=    Set Variable    0.0
+
+    FOR    ${price_element}    IN    @{item_prices}
+        ${price_text}=    Get Text    ${price_element}
+        ${price}=    Convert To Number    ${price_text.strip('$')}    2
+        ${sum}=    Evaluate    ${sum} + ${price}
+    END
+
+    ${subtotal_text}=    Get Text    ${subtotal_label}
+    ${subtotal_value}=    Convert To Number    ${subtotal_text.strip('Item total: $')}    2
+
+    Should Be Equal As Numbers    ${sum}    ${subtotal_value}
+
+Finish Checkout And Validate Completion
+    Click Button    ${finish_button}
+    Page Should Contain Element    ${confirmation_header}
+    Page Should Contain    ${confirmation_text_1}
+    Page Should Contain    ${confirmation_text_2}
+    Click Button    ${back_to_products_button}
