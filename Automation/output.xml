@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.1 on win32)" generated="2025-06-12T11:04:00.507576" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\ASUS\PycharmProjects\Automation\TestCases\Login.robot">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
+<arg>0.7s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-06-12T11:04:00.905702" elapsed="0.000291"/>
+</kw>
+<test id="s1-t1" name="tc1_Verify User Is Able To Login With Correct Credentials" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-12T11:04:00.907087" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2025-06-12T11:04:00.907603" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>executable_path=${CHROMEDRIVER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-12T11:04:00.906743" elapsed="4.697432"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2025-06-12T11:04:21.288991" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-12T11:04:21.289210" level="FAIL">WebDriverException: Message: unknown error: JavaScript code failed
+from unknown command: 'Runtime.evaluate' wasn't found
+  (Session info: chrome=137.0.7151.70)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff75299fea5+79173]
+	GetHandleVerifier [0x0x7ff75299ff00+79264]
+	(No symbol) [0x0x7ff752759e5a]
+	(No symbol) [0x0x7ff752746630]
+	(No symbol) [0x0x7ff752744d50]
+	(No symbol) [0x0x7ff7527455ff]
+	(No symbol) [0x0x7ff752770cdb]
+	(No symbol) [0x0x7ff752764330]
+	(No symbol) [0x0x7ff7527641d2]
+	(No symbol) [0x0x7ff752735d7a]
+	(No symbol) [0x0x7ff752733d23]
+	(No symbol) [0x0x7ff7528192b1]
+	(No symbol) [0x0x7ff7527d896a]
+	(No symbol) [0x0x7ff75280100d]
+	(No symbol) [0x0x7ff7527d8743]
+	(No symbol) [0x0x7ff7527a14c1]
+	(No symbol) [0x0x7ff7527a2253]
+	GetHandleVerifier [0x0x7ff752c6a2dd+3004797]
+	GetHandleVerifier [0x0x7ff752c6472d+2981325]
+	GetHandleVerifier [0x0x7ff752c83380+3107360]
+	GetHandleVerifier [0x0x7ff7529baa2e+188622]
+	GetHandleVerifier [0x0x7ff7529c22bf+219487]
+	GetHandleVerifier [0x0x7ff7529a8df4+115860]
+	GetHandleVerifier [0x0x7ff7529a8fa9+116297]
+	GetHandleVerifier [0x0x7ff75298f558+11256]
+	BaseThreadInitThunk [0x0x7ffe156ce8d7+23]
+	RtlUserThreadStart [0x0x7ffe164bc34c+44]
+</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="FAIL" start="2025-06-12T11:04:05.605738" elapsed="15.691663">WebDriverException: Message: unknown error: JavaScript code failed
+from unknown command: 'Runtime.evaluate' wasn't found
+  (Session info: chrome=137.0.7151.70)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff75299fea5+79173]
+	GetHandleVerifier [0x0x7ff75299ff00+79264]
+	(No symbol) [0x0x7ff752759e5a]
+	(No symbol) [0x0x7ff752746630]
+	(No symbol) [0x0x7ff752744d50]
+	(No symbol) [0x0x7ff7527455ff]
+	(No symbol) [0x0x7ff752770cdb]
+	(No symbol) [0x0x7ff752764330]
+	(No symbol) [0x0x7ff7527641d2]
+	(No symbol) [0x0x7ff752735d7a]
+	(No symbol) [0x0x7ff752733d23]
+	(No symbol) [0x0x7ff7528192b1]
+	(No symbol) [0x0x7ff7527d896a]
+	(No symbol) [0x0x7ff75280100d]
+	(No symbol) [0x0x7ff7527d8743]
+	(No symbol) [0x0x7ff7527a14c1]
+	(No symbol) [0x0x7ff7527a2253]
+	GetHandleVerifier [0x0x7ff752c6a2dd+3004797]
+	GetHandleVerifier [0x0x7ff752c6472d+2981325]
+	GetHandleVerifier [0x0x7ff752c83380+3107360]
+	GetHandleVerifier [0x0x7ff7529baa2e+188622]
+	GetHandleVerifier [0x0x7ff7529c22bf+219487]
+	GetHandleVerifier [0x0x7ff7529a8df4+115860]
+	GetHandleVerifier [0x0x7ff7529a8fa9+116297]
+	GetHandleVerifier [0x0x7ff75298f558+11256]
+	BaseThreadInitThunk [0x0x7ffe156ce8d7+23]
+	RtlUserThreadStart [0x0x7ffe164bc34c+44]
+</status>
+</kw>
+<kw name="Input Username" owner="Login">
+<status status="NOT RUN" start="2025-06-12T11:04:21.297926" elapsed="0.000058"/>
+</kw>
+<kw name="Input Password" owner="Login">
+<status status="NOT RUN" start="2025-06-12T11:04:21.298320" elapsed="0.000052"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-06-12T11:04:21.298680" elapsed="0.000041"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-06-12T11:04:21.299010" elapsed="0.000039"/>
+</kw>
+<status status="FAIL" start="2025-06-12T11:04:00.906169" elapsed="20.393253">WebDriverException: Message: unknown error: JavaScript code failed
+from unknown command: 'Runtime.evaluate' wasn't found
+  (Session info: chrome=137.0.7151.70)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff75299fea5+79173]
+	GetHandleVerifier [0x0x7ff75299ff00+79264]
+	(No symbol) [0x0x7ff752759e5a]
+	(No symbol) [0x0x7ff752746630]
+	(No symbol) [0x0x7ff752744d50]
+	(No symbol) [0x0x7ff7527455ff]
+	(No symbol) [0x0x7ff752770cdb]
+	(No symbol) [0x0x7ff752764330]
+	(No symbol) [0x0x7ff7527641d2]
+	(No symbol) [0x0x7ff752735d7a]
+	(No symbol) [0x0x7ff752733d23]
+	(No symbol) [0x0x7ff7528192b1]
+	(No symbol) [0x0x7ff7527d896a]
+	(No symbol) [0x0x7ff75280100d]
+	(No symbol) [0x0x7ff7527d8743]
+	(No symbol) [0x0x7ff7527a14c1]
+	(No symbol) [0x0x7ff7527a2253]
+	GetHandleVerifier [0x0x7ff752c6a2dd+3004797]
+	GetHandleVerifier [0x0x7ff752c6472d+2981325]
+	GetHandleVerifier [0x0x7ff752c83380+3107360]
+	GetHandleVerifier [0x0x7ff7529baa2e+188622]
+	GetHandleVerifier [0x0x7ff7529c22bf+219487]
+	GetHandleVerifier [0x0x7ff7529a8df4+115860]
+	GetHandleVerifier [0x0x7ff7529a8fa9+116297]
+	GetHandleVerifier [0x0x7ff75298f558+11256]
+	BaseThreadInitThunk [0x0x7ffe156ce8d7+23]
+	RtlUserThreadStart [0x0x7ffe164bc34c+44]
+</status>
+</test>
+<test id="s1-t2" name="tc2_Verify Error Message For Incorrect Credentials" line="18">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-12T11:04:21.302701" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2025-06-12T11:04:21.303154" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>executable_path=${CHROMEDRIVER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-12T11:04:21.302168" elapsed="4.289075"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-12T11:04:25.591596" elapsed="0.739646"/>
+</kw>
+<kw name="Input Incorrect Username" owner="Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-12T11:04:26.333862" level="INFO">Typing text 'invalid_user' into text field 'id:user-name'.</msg>
+<arg>${username_input}</arg>
+<arg>${INVALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-12T11:04:26.332910" elapsed="2.376617"/>
+</kw>
+<status status="PASS" start="2025-06-12T11:04:26.332146" elapsed="2.377857"/>
+</kw>
+<kw name="Input Incorrect Password" owner="Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-12T11:04:28.712917" level="INFO">Typing text 'wrong_password' into text field 'id:password'.</msg>
+<arg>${password_input}</arg>
+<arg>${INVALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-12T11:04:28.712066" elapsed="2.318818"/>
+</kw>
+<status status="PASS" start="2025-06-12T11:04:28.711094" elapsed="2.320012"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-12T11:04:31.031994" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-12T11:04:31.031614" elapsed="2.234194"/>
+</kw>
+<kw name="Verify The Error Message" owner="Login">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-12T11:04:34.710362" level="INFO">Current page contains text 'Epic sadface: Username and password do not match any user in this service'.</msg>
+<arg>${EXPECTED_ERROR_MESSAGE}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-12T11:04:33.268007" elapsed="1.442780"/>
+</kw>
+<status status="PASS" start="2025-06-12T11:04:33.267069" elapsed="1.444064"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-12T11:04:34.712185" elapsed="2.905264"/>
+</kw>
+<status status="PASS" start="2025-06-12T11:04:21.301450" elapsed="16.316424"/>
+</test>
+<test id="s1-t3" name="tc3_Verify login with empty username" line="27">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-12T11:04:37.619722" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2025-06-12T11:04:37.620254" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>executable_path=${CHROMEDRIVER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-12T11:04:37.619379" elapsed="5.912848"/>
+</kw>
+<kw name="Input Password" owner="Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-12T11:04:43.533898" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>${password_input}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-12T11:04:43.533466" elapsed="2.323256"/>
+</kw>
+<status status="PASS" start="2025-06-12T11:04:43.532970" elapsed="2.323916"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-12T11:04:45.857586" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-12T11:04:45.857244" elapsed="2.207216"/>
+</kw>
+<kw name="Verify The UserName Message" owner="Login">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-12T11:04:49.487698" level="INFO">Current page contains text 'Epic sadface: Username is required'.</msg>
+<arg>${EXPECTED_ERROR_MESSAGE2}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-12T11:04:48.066777" elapsed="1.421048"/>
+</kw>
+<status status="PASS" start="2025-06-12T11:04:48.065829" elapsed="1.422117"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-12T11:04:49.488279" elapsed="2.800331"/>
+</kw>
+<status status="PASS" start="2025-06-12T11:04:37.618811" elapsed="14.670267"/>
+</test>
+<test id="s1-t4" name="tc4_Verify login with empty password" line="34">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-12T11:04:52.291030" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2025-06-12T11:04:52.291538" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>executable_path=${CHROMEDRIVER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-12T11:04:52.290678" elapsed="5.347694"/>
+</kw>
+<kw name="Input Username" owner="Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-12T11:04:57.641423" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>${username_input}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-12T11:04:57.640575" elapsed="2.421839"/>
+</kw>
+<status status="PASS" start="2025-06-12T11:04:57.639575" elapsed="2.423150"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-12T11:05:00.064195" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-12T11:05:00.063443" elapsed="2.247315"/>
+</kw>
+<kw name="Verify The Password Message" owner="Login">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-12T11:05:03.752940" level="INFO">Current page contains text 'Epic sadface: Password is required'.</msg>
+<arg>${EXPECTED_ERROR_MESSAGE3}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-12T11:05:02.312811" elapsed="1.440386"/>
+</kw>
+<status status="PASS" start="2025-06-12T11:05:02.311939" elapsed="1.441450"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-12T11:05:03.754109" elapsed="2.817448"/>
+</kw>
+<status status="PASS" start="2025-06-12T11:04:52.290145" elapsed="14.281790"/>
+</test>
+<status status="FAIL" start="2025-06-12T11:04:00.509311" elapsed="66.063870"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login" id="s1" pass="3" fail="1" skip="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-06-12T11:04:00.907087" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2025-06-12T11:04:21.302701" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2025-06-12T11:04:37.619722" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2025-06-12T11:04:52.291030" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+</errors>
+</robot>
